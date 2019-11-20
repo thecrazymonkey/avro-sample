@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "923bc982-3921-4f0d-8153-01d365784552",
+		"name": "Schema Registry",
+		"description": "Scripts to interract with the Schema Registry - focused on backup and recovery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List subjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete subjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create subject PayMInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create subject PayMResponse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.schemaregistry.v1+json, application/vnd.schemaregistry+json, application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"schema\":\n    \"{\n       \\\"type\\\": \\\"record\\\",\n       \\\"name\\\": \\\"test\\\",\n       \\\"fields\\\":\n         [\n           {\n             \\\"type\\\": \\\"string\\\",\n             \\\"name\\\": \\\"field1\\\"\n           },\n           {\n             \\\"type\\\": \\\"int\\\",\n             \\\"name\\\": \\\"field2\\\"\n           }\n         ]\n     }\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SR}}/subjects/test/versions",
+					"host": [
+						"{{SR}}"
+					],
+					"path": [
+						"subjects",
+						"test",
+						"versions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5adfbd4e-43e1-4665-babe-688f5054404d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "196b69b5-79d5-43d1-a026-77f055fb4b97",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "1cb22773-175b-4bdb-88be-01693050917c",
+			"key": "hostName",
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "2c40b142-931f-4d9f-a2b5-cccc0746c671",
+			"key": "SR",
+			"value": "https://kafka3.ivan.confluent.nerdynick.net:8081",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

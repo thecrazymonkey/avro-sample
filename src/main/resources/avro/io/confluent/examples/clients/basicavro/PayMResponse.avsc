@@ -1,0 +1,10 @@
+{"namespace": "io.confluent.examples.clients.basicavro",
+ "type": "record",
+ "name": "PayMResponse",
+ "fields": [
+     {"name": "trace_id", "type": "string"},
+     {"name": "result", "type": "string"},
+     {"name": "sequence_no", "type": "int"},
+     {"name": "process_time", "type": "string"}
+ ]
+}
